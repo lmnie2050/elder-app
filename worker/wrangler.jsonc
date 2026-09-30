@@ -1,0 +1,21 @@
+/**
+ * 銀髮族陪伴助手 Worker 設定
+ * 設定說明：https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "elder-assistant",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-09-23",
+	"observability": {
+		"enabled": true
+	},
+	"upload_source_maps": true,
+	/**
+	 * Workers AI 綁定
+	 * 程式裡用 env.AI.run(模型名稱, 輸入) 呼叫
+	 */
+	"ai": {
+		"binding": "AI"
+	}
+}
